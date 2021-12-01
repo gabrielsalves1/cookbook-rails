@@ -1,0 +1,23 @@
+<h1>Receita a ser atualizada: <%=@recipe.name%> </h1>
+
+<%= form_with model: @recipe do |f| %>
+    <%= f.label 'Nome' %>
+    <%= f.text_field :name %>
+
+    <%= f.label 'Tipo da receita' %>
+    <%= f.text_field :recipe_type %>
+    
+    <%= f.label 'Cozinha' %>
+    <%= f.text_field :cuisine %>
+
+    <%= f.label 'Ingredientes' %>
+    <%= f.text_area :ingredients %>
+
+    <%= f.label 'Modo de preparo' %>
+    <%= f.text_field :cook_method %>
+
+    <%= f.label 'Tempo de preparo' %>
+    <%= f.text_field :cook_time %>
+
+    <%= f.submit 'Editar receita' %>
+<% end %>
